@@ -12,7 +12,7 @@ body {
 
 header {
     background: #2e7d32;
-    color: rgb(119, 0, 255);
+    color: rgb(247, 244, 251);
     text-align: center;
     padding: 25px;
 }
@@ -60,15 +60,16 @@ textarea {
     font-size: 1rem;
 }
 
+textarea {
+    resize: none;
+    height: 120px;
+}
+
 select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     }
-textarea {
-    resize: none;
-    height: 40px; 
-}
 
 button {
     background: #2e7d32;
