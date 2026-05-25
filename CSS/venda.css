@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body{
+    background: #f5f9f4;
+  }
+  header{
+    text-align: center;
+    padding: 50px 20px;
+  }
+  header h1{
+    font-size: 55px;
+    color: #2e7d32;
+  }
+  header p{
+    margin-top: 10px;
+    color: #555;
+    font-size: 18px;
+  }
+  .produtos{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    padding-bottom: 60px;
+  }
+  .card{
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  .card:hover{
+    transform: scale(1.03);
+  }
+  .card img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+  .info{
+    padding: 20px;
+    text-align: center;
+  }
+  .info h2{
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .preco{
+    color: #4caf50;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  button{
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+  }
+  button:hover{
+    background: #388e3c;
+  }
+  footer{
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
