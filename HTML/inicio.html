@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Jardim Botânico - Flores que abraçam</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- SIDEBAR - Navegação principal -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 4C10 4 8.5 5.5 8.5 7.5C8.5 9 9.5 10 11 10.5C10 11 8.5 12 8.5 14C8.5 16 10 17.5 12 17.5C14 17.5 15.5 16 15.5 14C15.5 12 14 11 13 10.5C14.5 10 15.5 9 15.5 7.5C15.5 5.5 14 4 12 4Z"
+                            fill="#B5D3B3" stroke="#8BBF86" stroke-width="1.2" />
+                        <circle cx="12" cy="12" r="2.5" fill="#F9D1DC" stroke="#E8AAB8" stroke-width="1" />
+                    </svg>
+                    <span class="sidebar-brand">Jardim<br>Botânico</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" data-page="inicio">
+                    <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9L12 2L21 9V20H3V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" fill="none" />
+                        <path d="M9 22V12H15V22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" fill="none" />
+                    </svg>
+                    <span>Início</span>
+                </button>
+                <button class="nav-btn" data-page="floricultura">
+                    <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 4C10 4 8.5 5.5 8.5 7.5C8.5 9 9.5 10 11 10.5C10 11 8.5 12 8.5 14C8.5 16 10 17.5 12 17.5C14 17.5 15.5 16 15.5 14C15.5 12 14 11 13 10.5C14.5 10 15.5 9 15.5 7.5C15.5 5.5 14 4 12 4Z"
+                            fill="none" stroke="currentColor" stroke-width="1.5" />
+                        <circle cx="12" cy="12" r="2.5" fill="none" stroke="currentColor" stroke-width="1.2" />
+                    </svg>
+                    <span>Floricultura</span>
+                </button>
+                <button class="nav-btn" data-page="vendas">
+                    <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 6H21L19 18H5L3 6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" fill="none" />
+                        <path d="M8 10V8C8 5.79 9.79 4 12 4C14.21 4 16 5.79 16 8V10" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                        <circle cx="8" cy="14" r="1" fill="currentColor" />
+                        <circle cx="16" cy="14" r="1" fill="currentColor" />
+                    </svg>
+                    <span>Vendas</span>
+                </button>
+                <button class="nav-btn" data-page="sobre">
+                    <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span>Sobre Nós</span>
+                </button>
+                <button class="nav-btn" data-page="contato">
+                    <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22 16.92V19C22.001 19.7906 21.754 20.562 21.2928 21.2074C20.8316 21.8527 20.1817 22.3387 19.4381 22.5952C18.6945 22.8517 17.8929 22.8659 17.1418 22.636C16.3906 22.4062 15.7287 21.944 15.24 21.32C13.5985 19.3175 12.3568 17.0169 11.59 14.54C11.1842 13.2376 10.9353 11.8888 10.85 10.52C10.7928 9.58749 10.8924 8.65138 11.145 7.75C11.4017 6.84694 11.8385 6.00584 12.43 5.28C12.9186 4.65623 13.5804 4.19416 14.3314 3.96436C15.0824 3.73456 15.8839 3.74878 16.6274 4.00534C17.3709 4.2619 18.0207 4.7479 18.4819 5.39328C18.9431 6.03867 19.1901 6.81011 19.19 7.6007V9.6007C19.1898 9.95352 19.087 10.2987 18.8948 10.5909C18.7026 10.8831 18.4302 11.1083 18.111 11.2387L15.571 12.3387"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            fill="none" />
+                        <path d="M12 2C13.5 2 14.5 3 15 4" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                    <span>Contato</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="flower-mini">
+                    <span>🌸</span> <span>🌼</span> <span>🌿</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL (Dinâmico) -->
+        <div class="main-wrapper">
+            <!-- Página Início (padrão) -->
+            <div id="page-inicio" class="page-content active">
+                <div class="container">
+                    <div class="main-content">
+                        <div class="header">
+                            <div class="title-block">
+                                <h1 class="main-title">Jardim Botânico</h1>
+                                <p class="subtitle">Flores que abraçam</p>
+                            </div>
+                            <div class="floral-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 4C10 4 8.5 5.5 8.5 7.5C8.5 9 9.5 10 11 10.5C10 11 8.5 12 8.5 14C8.5 16 10 17.5 12 17.5C14 17.5 15.5 16 15.5 14C15.5 12 14 11 13 10.5C14.5 10 15.5 9 15.5 7.5C15.5 5.5 14 4 12 4Z"
+                                        fill="#B5D3B3" stroke="#8BBF86" stroke-width="1.2" />
+                                    <path
+                                        d="M12 2V4M12 20V22M4 12H2M22 12H20M6.5 6.5L5 5M19 19L17.5 17.5M17.5 6.5L19 5M5 19L6.5 17.5"
+                                        stroke="#B5D3B3" stroke-width="1.2" stroke-linecap="round" />
+                                    <circle cx="12" cy="12" r="2.5" fill="#F9D1DC" stroke="#E8AAB8" stroke-width="1" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="products-grid">
+                            <div class="product-card">
+                                <div class="product-image maver-bg">
+                                    <div class="flower-badge">🌸</div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Maver</h3>
+                                    <p class="product-price">$600</p>
+                                    <button class="buy-btn">Comprar</button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image caleola-bg">
+                                    <div class="flower-badge">🌼</div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Caléola</h3>
+                                    <p class="product-price">$500</p>
+                                    <button class="buy-btn">Comprar</button>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image mimen-bg">
+                                    <div class="flower-badge">🌿</div>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Mimen</h3>
+                                    <p class="product-price">$700</p>
+                                    <button class="buy-btn">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-section">
+                        <div class="testimonial-card">
+                            <div class="quote-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M10 11H6C6 8.5 7.5 7 10 7V11ZM10 11V17H6V11H10ZM18 11H14C14 8.5 15.5 7 18 7V11ZM18 11V17H14V11H18Z"
+                                        fill="#F9D1DC" stroke="#E8AAB8" stroke-width="1.2" />
+                                    <path d="M4 4L8 8M20 4L16 8M20 20L16 16M4 20L8 16" stroke="#B5D3B3"
+                                        stroke-width="1.2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <h2 class="testimonial-title">Depoimento</h2>
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">
+                                    "As flores do Jardim Botânico transformaram meu lar. Cada espécie traz uma energia
+                                    única e acolhedora. Produtos de altíssima qualidade e entrega impecável. Recomendo a
+                                    todos que buscam beleza e bem-estar!"
+                                </p>
+                                <div class="customer-info">
+                                    <div class="avatar"></div>
+                                    <div class="customer-details">
+                                        <span class="customer-name">Ana Flores</span>
+                                        <span class="customer-role">Cliente há 2 anos</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leaf-decoration"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página Floricultura -->
+            <div id="page-floricultura" class="page-content">
+                <div class="floricultura-container">
+                    <div class="page-header">
+                        <h2 class="page-title">Nossa Floricultura</h2>
+                        <p class="page-subtitle">Espécies cultivadas com carinho e dedicação</p>
+                    </div>
+                    <div class="flowers-showcase">
+                        <div class="flower-item">
+                            <div class="flower-icon-large">🌺</div>
+                            <h3>Rosas do Jardim</h3>
+                            <p>Variedades exclusivas com fragrância única</p>
+                        </div>
+                        <div class="flower-item">
+                            <div class="flower-icon-large">🌻</div>
+                            <h3>Girassóis</h3>
+                            <p>Energia e vitalidade para seu lar</p>
+                        </div>
+                        <div class="flower-item">
+                            <div class="flower-icon-large">🪷</div>
+                            <h3>Lírios Orientais</h3>
+                            <p>Elegância e suavidade</p>
+                        </div>
+                        <div class="flower-item">
+                            <div class="flower-icon-large">🌿</div>
+                            <h3>Folhagens Premium</h3>
+                            <p>Verde que acolhe e purifica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página Vendas -->
+            <div id="page-vendas" class="page-content">
+                <div class="vendas-container">
+                    <div class="page-header">
+                        <h2 class="page-title">Vendas & Ofertas</h2>
+                        <p class="page-subtitle">Leve a beleza do jardim para sua casa</p>
+                    </div>
+                    <div class="offers-grid">
+                        <div class="offer-card">
+                            <span class="offer-emoji">🌸</span>
+                            <h3>Buquê da Estação</h3>
+                            <p>Flores frescas colhidas hoje</p>
+                            <div class="offer-price">$120</div>
+                            <button class="buy-offer-btn">Adquirir</button>
+                        </div>
+                        <div class="offer-card">
+                            <span class="offer-emoji">🌼</span>
+                            <h3>Kit Jardim</h3>
+                            <p>3 vasos + suporte rústico</p>
+                            <div class="offer-price">$390</div>
+                            <button class="buy-offer-btn">Adquirir</button>
+                        </div>
+                        <div class="offer-card">
+                            <span class="offer-emoji">🌻</span>
+                            <h3>Assinatura Mensal</h3>
+                            <p>Flores toda semana em casa</p>
+                            <div class="offer-price">$250/mês</div>
+                            <button class="buy-offer-btn">Assinar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página Sobre Nós -->
+            <div id="page-sobre" class="page-content">
+                <div class="sobre-container">
+                    <div class="page-header">
+                        <h2 class="page-title">Sobre Nós</h2>
+                        <p class="page-subtitle">História que floresce desde 1995</p>
+                    </div>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>O <strong>Jardim Botânico</strong> nasceu do sonho de conectar pessoas à natureza através
+                                da beleza das flores. Com mais de 25 anos de experiência, cultivamos cada muda com
+                                respeito ao meio ambiente e amor pela arte floral.</p>
+                            <p>Nossa missão é levar <strong>“Flores que abraçam”</strong> – arranjos que aquecem
+                                corações e transformam ambientes. Somos uma equipe apaixonada por botânica, design
+                                sustentável e atendimento humano.</p>
+                            <p>🌱 Sustentabilidade: utilizamos técnicas agroecológicas e embalagens biodegradáveis.<br>
+                                🤝 Compromisso social: parte das vendas apoia projetos de reflorestamento urbano.</p>
+                        </div>
+                        <div class="about-flower"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página Contato -->
+            <div id="page-contato" class="page-content">
+                <div class="contato-container">
+                    <div class="page-header">
+                        <h2 class="page-title">Contato</h2>
+                        <p class="page-subtitle">Estamos aqui para te ajudar</p>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="contact-detail">
+                                <span class="contact-icon">📍</span>
+                                <span>Rua das Flores, 345 - Jardim Botânico, SP</span>
+                            </div>
+                            <div class="contact-detail">
+                                <span class="contact-icon">📞</span>
+                                <span>(11) 99876-5432</span>
+                            </div>
+                            <div class="contact-detail">
+                                <span class="contact-icon">✉️</span>
+                                <span>contato@jardimbotanico.com</span>
+                            </div>
+                            <div class="contact-detail">
+                                <span class="contact-icon">⏰</span>
+                                <span>Seg-Sex: 9h às 19h | Sáb: 9h às 14h</span>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Seu nome" required>
+                            <input type="email" placeholder="Seu e-mail" required>
+                            <textarea rows="4" placeholder="Sua mensagem..."></textarea>
+                            <button type="submit" class="submit-btn">Enviar mensagem 🌸</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navegação entre páginas
+        const navButtons = document.querySelectorAll('.nav-btn');
+        const pages = document.querySelectorAll('.page-content');
+
+        function switchPage(pageId) {
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            const activePage = document.getElementById(`page-${pageId}`);
+            if (activePage) activePage.classList.add('active');
+
+            // Atualiza estado ativo dos botões
+            navButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-page') === pageId) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        navButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const page = btn.getAttribute('data-page');
+                switchPage(page);
+            });
+        });
+
+        // Pequenas interações para os botões comprar (alert demonstrativo)
+        const buyBtns = document.querySelectorAll('.buy-btn, .buy-offer-btn, .submit-btn');
+        buyBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (btn.classList.contains('submit-btn')) {
+                    alert('Mensagem enviada! Em breve retornaremos seu contato. 🌷');
+                } else {
+                    alert('Produto adicionado ao carrinho! Obrigado por escolher o Jardim Botânico 💐');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
