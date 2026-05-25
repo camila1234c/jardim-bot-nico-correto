@@ -10,46 +10,48 @@
 
 <body>
 
-    <header>
-        <h1>Jardim Botânico 🌷</h1>
-        <p>Faça seu pedido ou entre em contato conosco</p>
-    </header>
-
-    <section class="container">
-        <h2>Formulário de Contato</h2>
+    <div class="contato-container">
+        <div class="logo">🌿</div>
+        <h1>Jardim Botânico</h1>
+        <p class="subtitulo">Faça seu pedido de flores</p>
 
         <form>
-            <label>Nome Completo</label>
-            <input type="text" placeholder="Digite aqui" required>
+            <div class="input-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
 
-            <label>Número / WhatsApp</label>
-            <input type="tel" placeholder="Seu número">
+            <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="Digite seu número" required>
+            </div>
 
-            <label>E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" required>
+            <div class="input-group">
+                <label for="endereco">Endereço para entrega</label>
+                <input type="text" id="endereco" placeholder="Digite seu endereço" required>
+            </div>
 
-            <label>O que deseja?</label>
-            <select required>
-                <option value="">Selecione</option>
-                <option>Buquê de Flores</option>
-                <option>Arranjo Floral</option>
-                <option>Cesta de Presentes</option>
-                <option>Decoração para Eventos</option>
-                <option>Outro</option>
-            </select>
+            <div class="input-group">
+                <label for="pedido">O que deseja?</label>
+                <input type="text" id="pedido" placeholder="Ex: Buquê de rosas, orquídeas..." required>
+            </div>
 
-            <label>Endereço para entrega</label>
-            <input type="text" placeholder="Digite seu endereço">
+            <div class="input-group">
+                <label for="data">Data desejada para entrega</label>
+                <input type="date" id="data" required>
+            </div>
 
-            <label>Data desejada para entrega</label>
-            <input type="date">
+            <div class="input-group">
+                <label for="detalhes">Detalhes do pedido</label>
+                <textarea id="detalhes" placeholder="Mensagem para o cartão, cores, observações..." required></textarea>
+            </div>
+            <button type="submit" class="contato-btn">Enviar Pedido</button>
+            <a href="inicio.html" class="voltar-btn">Voltar para Página Inicial</a>
+            <div class="footer">
+                Ou fale conosco pelo WhatsApp <a href="#">(92) 99999-9999</a>
+            </div>
 
-            <label>Detalhes do pedido</label>
-            <textarea placeholder="Mensagem"></textarea>
-
-            <button type="submit">Enviar Pedido</button>
-        </form>
-    </section>
+    </div>
 
 </body>
 
