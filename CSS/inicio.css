@@ -1,0 +1,433 @@
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f0df 0%, #c8e0c5 100%);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Container principal com sidebar + conteúdo */
+.app-container {
+    max-width: 1600px;
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* ========= SIDEBAR (BARRA LATERAL) ========= */
+.sidebar {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(2px);
+    border-radius: 2.5rem;
+    box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(181, 211, 179, 0.4);
+}
+
+.sidebar-header {
+    margin-bottom: 2.5rem;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sidebar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c4b2c;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #2c5e2c, #4a7c4a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    background: transparent;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: #4a6741;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    width: 100%;
+}
+
+.nav-icon {
+    flex-shrink: 0;
+    color: #7b9c6e;
+    transition: color 0.2s;
+}
+
+.nav-btn span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: #f0f7ef;
+    color: #2c4b2c;
+}
+
+.nav-btn:hover .nav-icon {
+    color: #B5D3B3;
+}
+
+.nav-btn.active {
+    background: #e8f3e6;
+    color: #1f3b1f;
+    box-shadow: 0 4px 8px rgba(181, 211, 179, 0.2);
+}
+
+.nav-btn.active .nav-icon {
+    color: #8bbf86;
+}
+
+.sidebar-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #d4e2cf;
+    text-align: center;
+}
+
+.flower-mini {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    opacity: 0.7;
+}
+
+/* Wrapper do conteúdo principal */
+.main-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Páginas dinâmicas */
+.page-content {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.page-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CONTAINER ORIGINAL (página inicial) */
+.container {
+    max-width: 1400px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 3rem;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.main-content {
+    flex: 1.5;
+    padding: 2.5rem 2rem 2.5rem 2.5rem;
+    background: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.title-block {
+    flex: 1;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #2c4b2c;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #2c5e2c, #4a7c4a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #6b8c5c;
+    letter-spacing: 0.3px;
+    border-left: 4px solid #F9D1DC;
+    padding-left: 1rem;
+    margin-top: 0.25rem;
+}
+
+.floral-icon {
+    background: #F9F5F0;
+    border-radius: 60px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(181, 211, 179, 0.25);
+}
+
+.products-grid {
+    display: flex;
+    gap: 1.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    flex: 1;
+    min-width: 170px;
+    background: #fefef7;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0e8;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(100, 80, 60, 0.12);
+    border-color: #F9D1DC;
+}
+
+.product-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0.75rem;
+}
+
+.maver-bg {
+    background: linear-gradient(145deg, #F9D1DC, #fce4e9);
+    background-image: radial-gradient(circle at 20% 30%, rgba(255, 245, 240, 0.6) 2%, transparent 2.5%),
+        radial-gradient(circle at 75% 65%, rgba(181, 211, 179, 0.5) 1.8%, transparent 2%);
+    background-size: 35px 35px, 28px 28px;
+}
+
+.caleola-bg {
+    background: linear-gradient(125deg, #B5D3B3, #cfe8cd);
+    background-image: radial-gradient(circle at 80% 20%, rgba(249, 209, 220, 0.7) 3%, transparent 3.5%),
+        radial-gradient(circle at 15% 85%, #F9D1DC 2%, transparent 2.5%);
+    background-size: 40px 40px, 30px 30px;
+}
+
+.mimen-bg {
+    background: linear-gradient(115deg, #d7efd4, #c2e0be);
+    background-image: repeating-linear-gradient(45deg, rgba(249, 209, 220, 0.3) 0px, rgba(249, 209, 220, 0.3) 2px, transparent 2px, transparent 8px);
+}
+
+.flower-badge {
+    font-size: 2rem;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.1));
+    background: rgba(255, 255, 240, 0.7);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    backdrop-filter: blur(2px);
+}
+
+.product-info {
+    padding: 1.2rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.product-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #2b4b2a;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.2px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #8b5a2b;
+    margin: 0.5rem 0;
+    background: #fef2e6;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 40px;
+}
+
+.buy-btn {
+    background: #B5D3B3;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c4b2c;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 0.5rem;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.buy-btn:hover {
+    background: #a2c89f;
+    transform: scale(1.02);
+    color: #1e3a1e;
+    box-shadow: 0 5px 12px rgba(181, 211, 179, 0.4);
+}
+
+.testimonial-section {
+    flex: 1;
+    background: linear-gradient(145deg, #FDF8F5, #FEF9F2);
+    padding: 2.5rem 2rem;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid rgba(181, 211, 179, 0.4);
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2rem 1.8rem;
+    box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    backdrop-filter: blur(2px);
+    transition: all 0.2s;
+    border: 1px solid #f3ede8;
+}
+
+.quote-icon {
+    margin-bottom: 1rem;
+}
+
+.testimonial-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #B45F6B;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.3px;
+    border-bottom: 3px solid #F9D1DC;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3c2e24;
+    font-weight: 450;
+    margin-bottom: 2rem;
+    font-style: normal;
+}
+
+.testimonial-text::before {
+    content: "“";
+    font-size: 2.5rem;
+    color: #F9D1DC;
+    font-family: serif;
+    line-height: 1;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #B5D3B3, #9bc498);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: center 55%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customer-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-name {
+    font-weight: 700;
+    color: #2c4b2c;
+    font-size: 1.05rem;
+}
+
+.customer-role {
+    font-size: 0.8rem;
+    color: #8faa7c;
+}
+
+.leaf-decoration {
+    position: absolute;
+    bottom: 15px
